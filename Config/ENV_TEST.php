@@ -1,0 +1,15 @@
+<?php 
+	if (!defined('BASE_URL')) define('BASE_URL', 'https://backups25.apps-adn.com');
+
+	//Zona horaria
+	date_default_timezone_set('America/Caracas');
+	setlocale(LC_ALL, 'es_ES');
+
+	// Datos Dinámicos (pueden ser actualizados)
+	define('DB_HOST', 'nube3adn.ddns.me:3446');
+	define('DB_NAME', 'adn_test_api');
+	define('DB_USER', 'sistemas');
+	define('DB_PASSWORD', 'adn');
+	define('DB_CHARSET', "utf8");
+
+?>

@@ -1,0 +1,18 @@
+-- Tabla para controlar rate limiting de la API
+CREATE TABLE IF NOT EXISTS api_rate_limit (
+    ARL_ID INT AUTO_INCREMENT PRIMARY KEY,
+    ARL_EMPRESA VARCHAR(50) NOT NULL,
+    ARL_SESSION_ID VARCHAR(100) NOT NULL UNIQUE,
+    ARL_CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ARL_EXPIRES_AT TIMESTAMP NOT NULL,
+    
+    INDEX idx_empresa_expires (ARL_EMPRESA, ARL_EXPIRES_AT),
+    INDEX idx_session (ARL_SESSION_ID),
+    INDEX idx_expires (ARL_EXPIRES_AT)
+);
+
+-- Limpiar registros expirados automáticamente
+CREATE EVENT IF NOT EXISTS cleanup_rate_limit
+ON SCHEDULE EVERY 1 MINUTE
+DO
+  DELETE FROM api_rate_limit WHERE ARL_EXPIRES_AT <= NOW();

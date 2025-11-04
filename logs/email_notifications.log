@@ -1,0 +1,388 @@
+[2025-10-31 12:15:59] [INFO] === INICIO TEST ENVÍO MÚLTIPLE ===
+[2025-10-31 12:16:00] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com,adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com,adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com","adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Procesando [2]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com","adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com","adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: Asunto preparado: [Error] API Facturación - Empresa: TEST - 2025-10-31 12:16:00
+[2025-10-31 12:16:00] [INFO] EmailNotifier: sendMail - Iniciando envío a 3 destinatarios
+[2025-10-31 12:16:00] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com","adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-10-31 12:16:00] [INFO] EmailNotifier: Enviando correo 1/3 a: aquintana@sistemasadn.com
+[2025-10-31 12:16:01] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: c02b8b6b-539e-417f-b46c-b1befb3e43ac)
+[2025-10-31 12:16:01] [DEBUG] EmailNotifier: Análisis de dominios - Actual: sistemasadn.com (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-10-31 12:16:01] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-10-31 12:16:03] [INFO] EmailNotifier: Enviando correo 2/3 a: adrianaaguilar@mamprecarl.com.ve
+[2025-10-31 12:16:04] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 3860bff6-9138-4348-b17c-22d7520623dc)
+[2025-10-31 12:16:04] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-10-31 12:16:04] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-10-31 12:16:06] [INFO] EmailNotifier: Enviando correo 3/3 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-10-31 12:16:07] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: b2e60a6e-0ffd-4bee-a0fd-c663adc3ffaf)
+[2025-10-31 12:16:07] [INFO] EmailNotifier: Resumen de envío - Enviados: 3/3
+[2025-10-31 12:16:07] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 14:25:48] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 14:25:48] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 14:25:48] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 14:25:48] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 19:26:15] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-10-31 19:26:15] [DEBUG] Documento: Empresa: NULL
+[2025-10-31 19:26:15] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 19:26:15] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 14:26:35] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 14:26:35] [DEBUG] Documento: Empresa: NULL
+[2025-10-31 14:26:35] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 14:26:35] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 14:26:49] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 14:26:49] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 14:26:49] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 14:26:49] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 14:28:07] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 14:28:07] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 14:28:07] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 14:28:07] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 14:28:44] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 14:28:44] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 14:28:44] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 14:28:44] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 14:29:15] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 14:29:15] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 14:29:15] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 14:29:15] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 14:29:15] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 14:29:15
+[2025-10-31 14:29:15] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 14:29:15] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 14:29:15] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 14:29:17] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 8ab5e89f-0d5b-481a-b018-0769bf4ae867)
+[2025-10-31 14:29:17] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 14:29:17] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 14:29:17] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:01:16] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:01:16] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:01:16] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:01:16] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:01:16] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:01:16
+[2025-10-31 15:01:16] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:01:16] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:01:16] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:01:18] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 697991f3-53a2-4648-86a9-d3638f21df04)
+[2025-10-31 15:01:18] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:01:18] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:01:18] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:13:59] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:13:59] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:13:59] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:13:59] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:13:59] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:13:59
+[2025-10-31 15:13:59] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:13:59] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:13:59] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:14:01] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: f5023909-2a55-438f-ad56-3ae427576e40)
+[2025-10-31 15:14:01] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:14:01] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:14:01] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:18:46] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:18:46] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:18:46] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:18:46] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:18:46] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:18:47
+[2025-10-31 15:18:47] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:18:47] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:18:47] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:18:48] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 254d96d4-3f02-4385-afc2-901a56b2446b)
+[2025-10-31 15:18:48] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:18:48] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:18:48] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:24:33] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:24:33] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:24:33] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:24:33] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:24:33] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:24:33
+[2025-10-31 15:24:33] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:24:33] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:24:33] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:24:34] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: c33901fd-af53-4a6f-9deb-dc205b07a377)
+[2025-10-31 15:24:34] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:24:34] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:24:34] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:25:39] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:25:39] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:25:39] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:25:39] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:25:40] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:25:40
+[2025-10-31 15:25:40] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:25:40] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:25:40] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:25:41] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 22a61c40-37ee-4d7d-845a-36bcecb8f484)
+[2025-10-31 15:25:41] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:25:41] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:25:41] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:30:44] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:30:44] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:30:44] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:30:44] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:30:44] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:30:44
+[2025-10-31 15:30:44] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:30:44] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:30:44] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:30:46] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: ffac5004-b502-4167-8e0b-e32eca646839)
+[2025-10-31 15:30:46] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:30:46] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:30:46] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 15:49:03] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 15:49:03] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 15:49:03] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 15:49:03] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 15:49:03] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 15:49:03
+[2025-10-31 15:49:03] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 15:49:03] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 15:49:03] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 15:49:04] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: ff6fec81-5a45-472e-824b-5dbc15032f24)
+[2025-10-31 15:49:04] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 15:49:04] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 15:49:04] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:18:26] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:18:26] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:18:26] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:18:26] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:18:26] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:18:26
+[2025-10-31 16:18:26] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:18:26] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:18:26] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:18:27] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 3d0aae11-9a69-48e9-98c1-f2821b8630a1)
+[2025-10-31 16:18:27] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:18:27] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:18:27] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:19:14] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:19:14] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:19:14] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:19:14] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:19:14] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:19:14
+[2025-10-31 16:19:14] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:19:14] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:19:14] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:19:15] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: a7d8e1e3-fcc8-4d19-9c11-23f55dfb78ec)
+[2025-10-31 16:19:15] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:19:15] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:19:15] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:23:50] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:23:50] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:23:50] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:23:50] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:23:50] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:23:50
+[2025-10-31 16:23:50] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:23:50] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:23:50] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:23:51] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 36afe400-a7d2-4bd9-ac62-b31cc64df522)
+[2025-10-31 16:23:51] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:23:51] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:23:51] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:27:20] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:27:20] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:27:20] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:27:20] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:27:20] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:27:20
+[2025-10-31 16:27:20] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:27:20] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:27:20] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:27:22] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: 4b6b4ee5-c252-4577-9624-8fee42dc7b8c)
+[2025-10-31 16:27:22] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:27:22] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:27:22] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:42:53] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:42:53] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:42:53] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:42:53] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:42:53] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:42:53
+[2025-10-31 16:42:53] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:42:53] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:42:53] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:42:55] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: bdc95f26-9bf0-4fd8-a47f-16418cc0e3cd)
+[2025-10-31 16:42:55] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:42:55] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:42:55] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:46:24] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-10-31 16:46:24] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:46:24] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:46:24] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:46:25] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: TEST - 2025-10-31 16:46:25
+[2025-10-31 16:46:25] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:46:25] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:46:25] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:46:26] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: dc39c7d0-e167-4e66-9aed-54065a583435)
+[2025-10-31 16:46:26] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:46:26] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:46:26] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 16:58:55] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 16:58:55] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:58:55] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 16:58:55] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-10-31 16:59:34] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 16:59:34] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 16:59:34] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 16:59:34] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 16:59:34] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: Asunto preparado: [Error Crítico] API Facturación - Empresa: TEST - 2025-10-31 16:59:34
+[2025-10-31 16:59:34] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 16:59:34] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 16:59:34] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 16:59:36] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: f4e66370-579c-4309-ba27-bdcebe928085)
+[2025-10-31 16:59:36] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 16:59:36] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 16:59:36] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 17:01:18] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 17:01:18] [DEBUG] Documento: Empresa: TEST
+[2025-10-31 17:01:18] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-10-31 17:01:18] [INFO] Documento: Creando EmailNotifier para empresa: TEST
+[2025-10-31 17:01:18] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: TEST
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"aquintana@sistemasadn.com"}
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: parseEmails - Input string: 'aquintana@sistemasadn.com'
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["aquintana@sistemasadn.com"]
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'aquintana@sistemasadn.com' -> 'aquintana@sistemasadn.com'
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'aquintana@sistemasadn.com'
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["aquintana@sistemasadn.com"]
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: Correos parseados: ["aquintana@sistemasadn.com"]
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: Asunto preparado: [Error Crítico] API Facturación - Empresa: TEST - 2025-10-31 17:01:18
+[2025-10-31 17:01:18] [INFO] EmailNotifier: sendMail - Iniciando envío a 1 destinatarios
+[2025-10-31 17:01:18] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["aquintana@sistemasadn.com"]
+[2025-10-31 17:01:18] [INFO] EmailNotifier: Enviando correo 1/1 a: aquintana@sistemasadn.com
+[2025-10-31 17:01:20] [SUCCESS] EmailNotifier: Correo enviado exitosamente a aquintana@sistemasadn.com (ID: c029d8c2-14f4-4669-929d-7f43b6756225)
+[2025-10-31 17:01:20] [INFO] EmailNotifier: Resumen de envío - Enviados: 1/1
+[2025-10-31 17:01:20] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-10-31 17:01:20] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-10-31 17:08:54] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-10-31 17:08:54] [DEBUG] Documento: Empresa: NULL
+[2025-10-31 17:08:54] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-10-31 17:08:54] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-03 16:01:38] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-03 16:01:38] [DEBUG] Documento: Empresa: TEST
+[2025-11-03 16:01:38] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-03 16:01:38] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-03 16:02:07] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-03 16:02:07] [DEBUG] Documento: Empresa: TEST
+[2025-11-03 16:02:07] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-03 16:02:07] [INFO] Documento: No se puede enviar notificación - faltan datos
