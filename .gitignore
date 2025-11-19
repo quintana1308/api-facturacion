@@ -1,0 +1,35 @@
+# Build folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code config
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Logs
+*.log
+
+# Backup / temp files
+*.tmp
+*.bak
+~$*
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Ignore node_modules (if using Node tools)
+node_modules/
+
+# Ignore config folder
+Config/

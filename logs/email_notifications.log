@@ -386,3 +386,1105 @@
 [2025-11-03 16:02:07] [DEBUG] Documento: Empresa: TEST
 [2025-11-03 16:02:07] [DEBUG] Documento: JsonRequest disponible: NO
 [2025-11-03 16:02:07] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-04 10:24:30] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-04 10:24:30] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 10:24:30] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-04 10:24:30] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-04 12:24:57] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-04 12:24:57] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 12:24:57] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-04 12:24:57] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-04 15:44:12] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-04 15:44:12] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 15:44:12] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-04 15:44:12] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-04 16:02:50] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-04 16:02:50] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 16:02:50] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-04 16:02:50] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-04 16:02:50] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-04 16:02:50
+[2025-11-04 16:02:50] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:02:50] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-04 16:02:50] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 453be41a-9a81-4bd2-9a3c-162a61a49c28)
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-04 16:02:50] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-04 16:02:52] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-04 16:02:52] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 619fb4b3-55d3-45ae-a7d8-5f4cac066383)
+[2025-11-04 16:02:52] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-04 16:02:52] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-04 16:02:52] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-04 16:03:01] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-04 16:03:01] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 16:03:01] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-04 16:03:01] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-04 16:03:01] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-04 16:03:01
+[2025-11-04 16:03:01] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-04 16:03:01] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-04 16:03:01] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 0513a5da-6f66-4fc7-9441-7208cf4f67ee)
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-04 16:03:01] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-04 16:03:03] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-04 16:03:04] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 7bbd14e5-b3f4-4a0a-b2b2-ae4aa4166dee)
+[2025-11-04 16:03:04] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-04 16:03:04] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-04 16:03:04] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-04 17:43:22] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-04 17:43:22] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 17:43:22] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-04 17:43:22] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-04 18:34:21] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-04 18:34:21] [DEBUG] Documento: Empresa: MPC
+[2025-11-04 18:34:21] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-04 18:34:21] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-05 10:11:19] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-05 10:11:19] [DEBUG] Documento: Empresa: NULL
+[2025-11-05 10:11:19] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-05 10:11:19] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-05 11:08:35] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-05 11:08:35] [DEBUG] Documento: Empresa: MPC
+[2025-11-05 11:08:35] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-05 11:08:35] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-05 13:06:01] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-05 13:06:01] [DEBUG] Documento: Empresa: MPC
+[2025-11-05 13:06:01] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-05 13:06:01] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-05 14:07:21] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-05 14:07:21] [DEBUG] Documento: Empresa: MPC
+[2025-11-05 14:07:21] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-05 14:07:21] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-05 15:56:49] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-05 15:56:49] [DEBUG] Documento: Empresa: MPC
+[2025-11-05 15:56:49] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-05 15:56:49] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-05 15:56:49] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-05 15:56:49
+[2025-11-05 15:56:49] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-05 15:56:49] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 15:56:49] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-05 15:56:50] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: c0611d0d-c2fe-4243-b206-6e8444c74d17)
+[2025-11-05 15:56:50] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-05 15:56:50] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-05 15:56:52] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-05 15:56:52] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 8c9bacf9-9579-4115-a2f2-cc758484c491)
+[2025-11-05 15:56:52] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-05 15:56:52] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-05 15:56:52] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-05 19:12:55] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-05 19:12:55] [DEBUG] Documento: Empresa: MPC
+[2025-11-05 19:12:55] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-05 19:12:55] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-05 19:12:55] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-05 19:12:55
+[2025-11-05 19:12:55] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-05 19:12:55] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-05 19:12:55] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-05 19:12:56] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: d7c34a8e-b934-42a4-ac54-081c20fa2e00)
+[2025-11-05 19:12:56] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-05 19:12:56] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-05 19:12:58] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-05 19:12:58] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 6094b0c9-a4cf-4542-a175-1d67babae778)
+[2025-11-05 19:12:58] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-05 19:12:58] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-05 19:12:58] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-05 20:10:45] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-05 20:10:45] [DEBUG] Documento: Empresa: NULL
+[2025-11-05 20:10:45] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-05 20:10:45] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-06 11:34:29] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-06 11:34:29] [DEBUG] Documento: Empresa: MPC
+[2025-11-06 11:34:29] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-06 11:34:29] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-06 16:42:41] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-06 16:42:41] [DEBUG] Documento: Empresa: NULL
+[2025-11-06 16:42:41] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-06 16:42:41] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-06 14:40:57] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-06 14:40:57] [DEBUG] Documento: Empresa: MPC
+[2025-11-06 14:40:57] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-06 14:40:57] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-06 14:40:57] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-06 14:40:57
+[2025-11-06 14:40:57] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-06 14:40:57] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-06 14:40:57] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 900191b7-5959-4a54-a361-d75404195294)
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-06 14:40:57] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-06 14:40:59] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-06 14:40:59] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 3a71e2dc-06d7-4550-913a-723d0e4c7c43)
+[2025-11-06 14:40:59] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-06 14:40:59] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-06 14:40:59] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-06 14:47:22] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-06 14:47:22] [DEBUG] Documento: Empresa: MPC
+[2025-11-06 14:47:22] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-06 14:47:22] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 08:58:33] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-07 08:58:33] [DEBUG] Documento: Empresa: MPC
+[2025-11-07 08:58:33] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 08:58:33] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 17:34:03] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 17:34:03] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 17:34:03] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 17:34:03] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 13:36:46] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-07 13:36:46] [DEBUG] Documento: Empresa: MPC
+[2025-11-07 13:36:46] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-07 13:36:46] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-07 13:36:46] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-07 13:36:46
+[2025-11-07 13:36:46] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-07 13:36:46] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-07 13:36:46] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-07 13:36:47] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 21bc1592-79b6-4f8e-bb28-09129e118535)
+[2025-11-07 13:36:47] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-07 13:36:47] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-07 13:36:49] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-07 13:36:49] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 1a3582bb-f399-4c3d-b503-f95d9d34860e)
+[2025-11-07 13:36:49] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-07 13:36:49] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-07 13:36:49] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-07 20:17:56] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 20:17:56] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 20:17:56] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 20:17:56] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 16:53:00] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-07 16:53:00] [DEBUG] Documento: Empresa: MPC
+[2025-11-07 16:53:00] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 16:53:00] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 17:21:42] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-07 17:21:42] [DEBUG] Documento: Empresa: MPC
+[2025-11-07 17:21:42] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 17:21:42] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 18:59:46] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-07 18:59:46] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 18:59:46] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 18:59:46] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 23:06:39] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 23:06:39] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 23:06:39] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 23:06:39] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 23:20:49] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 23:20:49] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 23:20:49] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 23:20:49] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 23:24:02] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 23:24:02] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 23:24:02] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 23:24:02] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 23:25:20] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 23:25:20] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 23:25:20] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 23:25:20] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-07 23:33:58] [INFO] Documento: sendErrorNotification llamado con errorType: validation
+[2025-11-07 23:33:58] [DEBUG] Documento: Empresa: NULL
+[2025-11-07 23:33:58] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-07 23:33:58] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-10 09:53:01] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-10 09:53:01] [DEBUG] Documento: Empresa: MPC
+[2025-11-10 09:53:01] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-10 09:53:01] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-10 14:53:39] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-10 14:53:39] [DEBUG] Documento: Empresa: MPC
+[2025-11-10 14:53:39] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-10 14:53:39] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-10 15:07:03] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-10 15:07:03] [DEBUG] Documento: Empresa: NULL
+[2025-11-10 15:07:03] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-10 15:07:03] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-10 16:36:20] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-10 16:36:20] [DEBUG] Documento: Empresa: MPC
+[2025-11-10 16:36:20] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-10 16:36:20] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-10 17:05:05] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-10 17:05:05] [DEBUG] Documento: Empresa: NULL
+[2025-11-10 17:05:05] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-10 17:05:05] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-11 10:09:16] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-11 10:09:16] [DEBUG] Documento: Empresa: MPC
+[2025-11-11 10:09:16] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-11 10:09:16] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-11 10:48:12] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-11 10:48:12] [DEBUG] Documento: Empresa: MPC
+[2025-11-11 10:48:12] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-11 10:48:12] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-11 11:12:15] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-11 11:12:15] [DEBUG] Documento: Empresa: MPC
+[2025-11-11 11:12:15] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-11 11:12:15] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-12 13:45:36] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-12 13:45:36] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 13:45:36] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-12 13:45:36] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-12 15:17:03] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-12 15:17:03] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 15:17:03] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-12 15:17:03] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-12 15:17:09] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-12 15:17:09] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 15:17:09] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-12 15:17:09] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-12 16:35:30] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-12 16:35:30] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 16:35:30] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-12 16:35:30] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-12 16:35:30] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-12 16:35:30
+[2025-11-12 16:35:30] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 16:35:30] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-12 16:35:30] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: f66bfc41-0c7a-47eb-81a2-dafba44b4951)
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-12 16:35:30] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-12 16:35:32] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-12 16:35:33] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 2236f80d-0243-4f5a-9447-2ffa805b3e18)
+[2025-11-12 16:35:33] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-12 16:35:33] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-12 16:35:33] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-12 16:46:59] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-12 16:46:59] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 16:46:59] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-12 16:46:59] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-12 17:22:59] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-12 17:22:59] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 17:22:59] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-12 17:22:59] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-12 17:22:59] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-12 17:22:59
+[2025-11-12 17:22:59] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-12 17:22:59] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-12 17:22:59] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-12 17:23:00] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: eed5d1a8-f341-4419-98a4-8c00ecff8785)
+[2025-11-12 17:23:00] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-12 17:23:00] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-12 17:23:02] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-12 17:23:02] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 563a257e-3bea-416e-835e-a464effca92f)
+[2025-11-12 17:23:02] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-12 17:23:02] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-12 17:23:02] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-12 17:27:25] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-12 17:27:25] [DEBUG] Documento: Empresa: MPC
+[2025-11-12 17:27:25] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-12 17:27:25] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-13 11:12:05] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-13 11:12:05] [DEBUG] Documento: Empresa: MPC
+[2025-11-13 11:12:05] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-13 11:12:05] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-13 12:03:39] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-13 12:03:39] [DEBUG] Documento: Empresa: MPC
+[2025-11-13 12:03:39] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-13 12:03:39] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-13 12:03:39] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-13 12:03:39
+[2025-11-13 12:03:39] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-13 12:03:39] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:03:39] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-13 12:03:40] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 0e4d5c3c-568a-40a8-be3f-fa17763fd491)
+[2025-11-13 12:03:40] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-13 12:03:40] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-13 12:03:42] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-13 12:03:42] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 2b2fa186-d5f0-4e9b-8816-d861dd7707f2)
+[2025-11-13 12:03:42] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-13 12:03:42] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-13 12:03:42] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-13 12:31:50] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-13 12:31:50] [DEBUG] Documento: Empresa: MPC
+[2025-11-13 12:31:50] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-13 12:31:50] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-13 12:31:50] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-13 12:31:50
+[2025-11-13 12:31:50] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-13 12:31:50] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-13 12:31:50] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: a21a6f9b-8fd8-4f93-8cc4-beb7828d3cae)
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-13 12:31:50] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-13 12:31:52] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-13 12:31:52] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 75cd2efe-d76d-48bf-901f-3e00581a1282)
+[2025-11-13 12:31:52] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-13 12:31:52] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-13 12:31:52] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-13 17:08:24] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-13 17:08:24] [DEBUG] Documento: Empresa: MPC
+[2025-11-13 17:08:24] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-13 17:08:24] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 09:13:01] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 09:13:01] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 09:13:01] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 09:13:01] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 10:41:02] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 10:41:02] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 10:41:02] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 10:41:02] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 10:56:06] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 10:56:06] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 10:56:06] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 10:56:06] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 11:10:16] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 11:10:16] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 11:10:16] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 11:10:16] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 11:31:31] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-14 11:31:31] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 11:31:31] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-14 11:31:31] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-14 11:31:31] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-14 11:31:31
+[2025-11-14 11:31:31] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-14 11:31:31] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 11:31:31] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-14 11:31:32] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 04a7f5c5-f148-44bf-8689-86b481afa335)
+[2025-11-14 11:31:32] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-14 11:31:32] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-14 11:31:34] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-14 11:31:34] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: cb4f459d-cc33-4953-888e-b771b7e43b22)
+[2025-11-14 11:31:34] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-14 11:31:34] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-14 11:31:34] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-14 11:47:42] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 11:47:42] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 11:47:42] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 11:47:42] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 12:01:33] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 12:01:33] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 12:01:33] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 12:01:33] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 12:05:19] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 12:05:19] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 12:05:19] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 12:05:19] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 12:19:53] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 12:19:53] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 12:19:53] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 12:19:53] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 12:55:58] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 12:55:58] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 12:55:58] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 12:55:58] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 13:20:47] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 13:20:47] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 13:20:47] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 13:20:47] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 13:31:07] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 13:31:07] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 13:31:07] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 13:31:07] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 13:51:15] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-14 13:51:15] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 13:51:15] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-14 13:51:15] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-14 13:51:15] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-14 13:51:15
+[2025-11-14 13:51:15] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:51:15] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-14 13:51:15] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: c4207795-b695-45ef-a34f-4b6c8a4cac3e)
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-14 13:51:15] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-14 13:51:17] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-14 13:51:17] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 27241d7c-dd3a-413d-8087-1ecf7d665d6d)
+[2025-11-14 13:51:17] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-14 13:51:17] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-14 13:51:17] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-14 13:55:51] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-14 13:55:51] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 13:55:51] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-14 13:55:51] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-14 13:55:51] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-14 13:55:51
+[2025-11-14 13:55:51] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-14 13:55:51] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-14 13:55:51] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 24d2f7b7-3b9f-4f28-aa25-941c8680d446)
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-14 13:55:51] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-14 13:55:53] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-14 13:55:54] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: d6c3d471-e0ff-4522-bd12-57b10d4702e1)
+[2025-11-14 13:55:54] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-14 13:55:54] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-14 13:55:54] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-14 15:00:56] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 15:00:56] [DEBUG] Documento: Empresa: NULL
+[2025-11-14 15:00:56] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 15:00:56] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 15:08:44] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 15:08:44] [DEBUG] Documento: Empresa: NULL
+[2025-11-14 15:08:44] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 15:08:44] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 17:01:00] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 17:01:00] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 17:01:00] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 17:01:00] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-14 18:02:17] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-14 18:02:17] [DEBUG] Documento: Empresa: MPC
+[2025-11-14 18:02:17] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-14 18:02:17] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-15 10:26:53] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-15 10:26:53] [DEBUG] Documento: Empresa: MPC
+[2025-11-15 10:26:53] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-15 10:26:53] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-15 10:26:53] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-15 10:26:53
+[2025-11-15 10:26:53] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-15 10:26:53] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-15 10:26:53] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 135a1d55-e5fb-4c13-ae99-40b627ced32f)
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-15 10:26:53] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-15 10:26:55] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-15 10:26:55] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 063c467f-4b25-45c2-9f1c-fdc251e7b14f)
+[2025-11-15 10:26:55] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-15 10:26:55] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-15 10:26:55] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-15 14:02:12] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-15 14:02:12] [DEBUG] Documento: Empresa: MPC
+[2025-11-15 14:02:12] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-15 14:02:12] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-15 15:02:27] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-15 15:02:27] [DEBUG] Documento: Empresa: MPC
+[2025-11-15 15:02:27] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-15 15:02:27] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-17 07:47:26] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-17 07:47:26] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 07:47:26] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-17 07:47:26] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-17 11:05:17] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-17 11:05:17] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 11:05:17] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-17 11:05:17] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-17 11:15:13] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 11:15:13] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 11:15:13] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 11:15:13] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 11:15:13] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 11:15:13
+[2025-11-17 11:15:13] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:15:13] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 11:15:13] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: a8e2bdd3-ea9b-4a98-a40f-60e00af628fa)
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 11:15:13] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 11:15:15] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 11:15:15] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: fe550b17-9fac-4f1a-b2bf-fc539cc0e52c)
+[2025-11-17 11:15:15] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 11:15:15] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 11:15:15] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 11:45:11] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 11:45:11] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 11:45:11] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 11:45:11] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 11:45:11] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 11:45:11
+[2025-11-17 11:45:11] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 11:45:11] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 11:45:11] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 11:45:12] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 4d23d822-3dd5-45a2-9e17-b1ab68b1ac83)
+[2025-11-17 11:45:12] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 11:45:12] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 11:45:14] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 11:45:14] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: f780dda0-ed8f-4ae1-8cfe-d1deb8b66717)
+[2025-11-17 11:45:14] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 11:45:14] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 11:45:14] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 11:46:38] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-17 11:46:38] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 11:46:38] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-17 11:46:38] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-17 14:35:32] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 14:35:32] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 14:35:32] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 14:35:32] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 14:35:32] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 14:35:32
+[2025-11-17 14:35:32] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 14:35:32] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 14:35:32] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 808e1c3f-7f44-4ae8-abd1-86691f6c5398)
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 14:35:32] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 14:35:34] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 14:35:35] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 2f34ca89-0f04-4171-902e-04a1b9ff675c)
+[2025-11-17 14:35:35] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 14:35:35] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 14:35:35] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 16:52:26] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-17 16:52:26] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 16:52:26] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-17 16:52:26] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-17 17:27:36] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:27:36] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:27:36] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:27:36] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:27:36] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:27:36
+[2025-11-17 17:27:36] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:36] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:27:36] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 9a658731-fa25-4623-a6df-23c3193b8ad8)
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:27:36] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:27:38] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:27:38] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: b800a98b-ed8c-4b2e-a1bd-b5d2c9100242)
+[2025-11-17 17:27:38] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:27:38] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:27:38] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:27:48] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:27:48] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:27:48] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:27:48] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:27:48] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:27:48
+[2025-11-17 17:27:48] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:48] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:27:48] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 535e7d15-a5e1-4d8b-a325-789cc9633186)
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:27:48] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:27:50] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:27:50] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: e2d17acf-1cbe-424f-867b-b659e7a72d27)
+[2025-11-17 17:27:50] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:27:50] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:27:50] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:27:51] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:27:51] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:27:51] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:27:51] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:27:51] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:27:51
+[2025-11-17 17:27:51] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:27:51] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:27:51] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: d8e7dc1d-a36d-4570-b6e8-382956d1db51)
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:27:51] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:27:53] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:27:53] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: ad767d0a-7ff2-498a-ae7a-f0db36a17515)
+[2025-11-17 17:27:53] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:27:53] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:27:53] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:05] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:05] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:05] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:05] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:05] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:05
+[2025-11-17 17:28:05] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:05] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:05] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:10] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 4f2abb95-dfee-433a-bf7b-85db59151bce)
+[2025-11-17 17:28:10] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:10] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:11] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:11] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:11] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:11] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:11] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:11
+[2025-11-17 17:28:11] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:11] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:11] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:12] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 23b8d986-ff9f-403c-8bb1-a70375a25332)
+[2025-11-17 17:28:12] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:12] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:12] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:12] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 21c725f7-eea6-4fc7-9c35-d5772925b3d0)
+[2025-11-17 17:28:12] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:12] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:12] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:14] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:14] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 94d165e3-9e1b-426e-86c1-519140c94b34)
+[2025-11-17 17:28:14] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:14] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:14] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:18] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:18] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:18] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:18] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:18] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:18
+[2025-11-17 17:28:18] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:18] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:18] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 06650386-ff36-49d2-8006-6e48a5bf4f7e)
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:18] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:20] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:21] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 1764f436-39b4-4bfa-9ac2-fb736258ade4)
+[2025-11-17 17:28:21] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:21] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:21] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:25] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:25] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:25] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:25] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:25] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:25
+[2025-11-17 17:28:25] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:25] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:25] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: b8f5f084-ffbf-459d-9139-6341a4fb6ed8)
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:25] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:27] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:28] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 52a7507c-e74d-412b-a20b-5c8183ed2147)
+[2025-11-17 17:28:28] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:28] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:28] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:31] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:31] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:31] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:31] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:31] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:31
+[2025-11-17 17:28:31] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:31] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:31] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 24c3fd81-0a17-4a9c-9e71-238619d676c3)
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:31] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:33] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:34] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: e0b7971f-e5bb-4ddd-bfd3-9291137f6688)
+[2025-11-17 17:28:34] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:34] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:34] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:38] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:38] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:38] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:38] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:38] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:38
+[2025-11-17 17:28:38] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:38] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:38] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 3874bfe0-d277-4155-b7f3-60dc4036edc5)
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:38] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:40] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:41] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 9f20040d-d8d8-4536-93c2-40b2ad70bcff)
+[2025-11-17 17:28:41] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:41] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:41] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:41] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:41] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:41] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:41] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:41] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:41
+[2025-11-17 17:28:41] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:41] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:41] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: f4dbbd66-7001-4073-85e0-4868a5b437df)
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:41] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:43] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:44] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 9435adf5-9a02-4b91-9031-d3be607f2d5b)
+[2025-11-17 17:28:44] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:44] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:44] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:28:48] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:28:48] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:28:48] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:28:48] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:28:48] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:28:48
+[2025-11-17 17:28:48] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:28:48] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:28:48] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 77b9e7f0-8ad2-4475-a9ce-3badfd2a0b41)
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:28:48] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:28:50] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:28:50] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 647246a0-77ce-452f-a890-8dbb395e4acf)
+[2025-11-17 17:28:50] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:28:50] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:28:50] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:29:03] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:29:03] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:29:03] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:29:03] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:29:03] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:29:03
+[2025-11-17 17:29:03] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:03] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:29:03] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 8eabd064-d80b-4ecd-89c3-81d6d5cc9a3c)
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:29:03] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:29:05] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:29:15] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: fb4b2716-fd02-4701-b327-1a76a32e60ba)
+[2025-11-17 17:29:15] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:29:15] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:29:15] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:29:31] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:29:31] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:29:31] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:29:31] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:29:31] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:29:31
+[2025-11-17 17:29:31] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:31] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:29:31] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: 9a1174f1-ebf8-4a77-bf56-43fe05d4c2f0)
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:29:31] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:29:33] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:29:33] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: 5a175961-033e-46e4-895b-ef6d88ba6c96)
+[2025-11-17 17:29:33] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:29:33] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:29:33] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-17 17:29:39] [INFO] Documento: sendErrorNotification llamado con errorType: processing
+[2025-11-17 17:29:39] [DEBUG] Documento: Empresa: MPC
+[2025-11-17 17:29:39] [DEBUG] Documento: JsonRequest disponible: SÍ
+[2025-11-17 17:29:39] [INFO] Documento: Creando EmailNotifier para empresa: MPC
+[2025-11-17 17:29:39] [INFO] EmailNotifier: Iniciando envío de notificación para empresa: MPC
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: Datos de empresa obtenidos: {"ETR_NOTIFICATION_EMAIL":1,"ETR_EMAIL":"adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve"}
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Input string: 'adrianaaguilar@mamprecarl.com.ve,mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Después de explode: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Procesando [0]: 'adrianaaguilar@mamprecarl.com.ve' -> 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'adrianaaguilar@mamprecarl.com.ve'
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Procesando [1]: 'mampreca_asistentegerencial@mamprecarl.com.ve' -> 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Email válido añadido: 'mampreca_asistentegerencial@mamprecarl.com.ve'
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: parseEmails - Resultado final: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: Correos parseados: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: Asunto preparado: [Error de Procesamiento] API Facturación - Empresa: MPC - 2025-11-17 17:29:39
+[2025-11-17 17:29:39] [INFO] EmailNotifier: sendMail - Iniciando envío a 2 destinatarios
+[2025-11-17 17:29:39] [DEBUG] EmailNotifier: sendMail - Lista de destinatarios: ["adrianaaguilar@mamprecarl.com.ve","mampreca_asistentegerencial@mamprecarl.com.ve"]
+[2025-11-17 17:29:39] [INFO] EmailNotifier: Enviando correo 1/2 a: adrianaaguilar@mamprecarl.com.ve
+[2025-11-17 17:29:40] [SUCCESS] EmailNotifier: Correo enviado exitosamente a adrianaaguilar@mamprecarl.com.ve (ID: c4102afa-0361-4dbc-a483-38ccb6ff81cd)
+[2025-11-17 17:29:40] [DEBUG] EmailNotifier: Análisis de dominios - Actual: mamprecarl.com.ve (Corp: Sí), Siguiente: mamprecarl.com.ve (Corp: Sí)
+[2025-11-17 17:29:40] [DEBUG] EmailNotifier: Esperando 2 segundos antes del siguiente envío...
+[2025-11-17 17:29:42] [INFO] EmailNotifier: Enviando correo 2/2 a: mampreca_asistentegerencial@mamprecarl.com.ve
+[2025-11-17 17:29:42] [SUCCESS] EmailNotifier: Correo enviado exitosamente a mampreca_asistentegerencial@mamprecarl.com.ve (ID: c2a48b99-d6bf-4028-a1fd-6fe057ac0837)
+[2025-11-17 17:29:42] [INFO] EmailNotifier: Resumen de envío - Enviados: 2/2
+[2025-11-17 17:29:42] [SUCCESS] EmailNotifier: Resultado del envío: ÉXITO
+[2025-11-17 17:29:42] [SUCCESS] Documento: Resultado EmailNotifier: ÉXITO
+[2025-11-18 09:15:15] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 09:15:15] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 09:15:15] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 09:15:15] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 11:28:43] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 11:28:43] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 11:28:43] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 11:28:43] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 11:49:50] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 11:49:50] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 11:49:50] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 11:49:50] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 13:06:57] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 13:06:57] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 13:06:57] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 13:06:57] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 16:02:44] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 16:02:44] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 16:02:44] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 16:02:44] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 16:19:53] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 16:19:53] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 16:19:53] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 16:19:53] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-18 16:44:55] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-18 16:44:55] [DEBUG] Documento: Empresa: MPC
+[2025-11-18 16:44:55] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-18 16:44:55] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 10:09:32] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 10:09:32] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 10:09:32] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 10:09:32] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 10:41:20] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 10:41:20] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 10:41:20] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 10:41:20] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 10:52:45] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 10:52:45] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 10:52:45] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 10:52:45] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 11:41:30] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 11:41:30] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 11:41:30] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 11:41:30] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 11:55:27] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 11:55:27] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 11:55:27] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 11:55:27] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 14:42:41] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 14:42:41] [DEBUG] Documento: Empresa: MPC
+[2025-11-19 14:42:41] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 14:42:41] [INFO] Documento: No se puede enviar notificación - faltan datos
+[2025-11-19 15:19:41] [INFO] Documento: sendErrorNotification llamado con errorType: critical
+[2025-11-19 15:19:41] [DEBUG] Documento: Empresa: TEST
+[2025-11-19 15:19:41] [DEBUG] Documento: JsonRequest disponible: NO
+[2025-11-19 15:19:41] [INFO] Documento: No se puede enviar notificación - faltan datos

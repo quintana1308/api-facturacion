@@ -109,7 +109,9 @@ class Documento extends Controllers {
         $this->validateEmpresa($data->empresa);
         $this->validateToken($bearerToken, $data->empresa);
 		
-        $this->validateTasa($data->valor_cambiario_dolar, $data->fecha);
+        if($data->empresa !== 'ENV_TEST'){
+            $this->validateTasa($data->valor_cambiario_dolar, $data->fecha);
+        }
 		
         $this->token = $bearerToken;
 		$this->empresa = (isset($data->empresa) && $data->empresa !== "") ? $data->empresa : NULL;

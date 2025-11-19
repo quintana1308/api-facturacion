@@ -67,8 +67,7 @@ class Pedido extends Controllers{
         $data['numero_pedido'] = $numeroPedido;
         
         // Cargar la vista
-        dep($data);
-        exit;
+
         $this->views->getView($this, "pedido", $data);
     }
 }

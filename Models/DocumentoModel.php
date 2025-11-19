@@ -323,7 +323,7 @@ class DocumentoModel extends Mysql {
             $documentos[] = $this->_prepararArrayDocumento($factura, 'FAV', 'D', $moneda_base, ['numeroDocUltimo' => $numeroDocUltimo, 'horaFav' => $horaFav['tiempo']]);
         }	
 
-		if($factura->empresa !== 'CRM'){
+		if($factura->empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
         	// Documento FAV$/NEN$ (D) si moneda base es BS
 			if ($moneda_base == 'BS') {
 				// Determinar el tipo de documento en dólares
@@ -882,9 +882,6 @@ class DocumentoModel extends Mysql {
         ];
         $valueStrings[] = "(" . implode(',', $values) . ")";
         
-        dep($sql_inicio . implode(', ', $valueStrings));
-        exit;
-
         $this->insert_massive($sql_inicio . implode(', ', $valueStrings));
     }
 
