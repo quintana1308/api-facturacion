@@ -261,8 +261,9 @@ class Documento extends Controllers {
         $requestDate = $mysql->select($sqlDate);
 
         if (!$requestDate) {
-            http_response_code(400);
-            throw new Exception("La fecha de la factura no existe.");
+            // No hay documentos previos de este tipo (empresa nueva o sin FAV/NEN)
+            // Aceptamos la fecha enviada sin validar contra nada
+            return;
         }
 
         if ($dateFac < $requestDate['fecha']) {

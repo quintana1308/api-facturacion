@@ -436,11 +436,17 @@ class DocumentoModel extends Mysql {
             
             if($factura->tipo_documento === 'NEN'){
 
-                if ($moneda_base == 'BS') {
-                    $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
-                    $tipoDocPagoNen = 'NEN$';
-                    $tipoDocPagoFav = 'FAV$';
-                } else {
+                if($factura->empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
+                    if ($moneda_base == 'BS') {
+                        $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
+                        $tipoDocPagoNen = 'NEN$';
+                        $tipoDocPagoFav = 'FAV$';
+                    } else {
+                        $netoPago = $factura->neto;
+                        $tipoDocPagoNen = 'NEN';
+                        $tipoDocPagoFav = 'FAV';
+                    }
+                }else{
                     $netoPago = $factura->neto;
                     $tipoDocPagoNen = 'NEN';
                     $tipoDocPagoFav = 'FAV';
@@ -449,7 +455,8 @@ class DocumentoModel extends Mysql {
                 $documentoRecibo[] = $this->_prepararArrayDocumento($factura, $tipoDocPagoNen, 'P', $moneda_base, [
                     'referencia' => $factura->recibo->codigo,
                     'netoUsd' => $netoPago,
-                    'horaFav' => $horaFav['tiempo']
+                    'horaFav' => $horaFav['tiempo'],
+                    'numeroPedUltimo' => $numeroPedUltimo
                 ]);
                 $documentoRecibo[] = $this->_prepararArrayDocumento($factura, $tipoDocPagoFav, 'P', $moneda_base, [
                     'referencia' => $numeroReciboUltimo,
@@ -460,10 +467,15 @@ class DocumentoModel extends Mysql {
 
             }else{
 
-                if ($moneda_base == 'BS') {
-                    $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
-                    $tipoDocPagoFav = 'FAV$';
-                } else {
+                if($factura->empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
+                    if ($moneda_base == 'BS') {
+                        $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
+                        $tipoDocPagoFav = 'FAV$';
+                    } else {
+                        $netoPago = $factura->neto;
+                        $tipoDocPagoFav = 'FAV';
+                    }
+                }else{
                     $netoPago = $factura->neto;
                     $tipoDocPagoFav = 'FAV';
                 }

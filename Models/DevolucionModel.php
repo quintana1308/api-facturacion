@@ -37,9 +37,6 @@ class DevolucionModel extends Mysql {
             $this->_bulkInsertOrUpdateProductos($data->productos);
             $this->_bulkInsertUndagruLogic($data);
 
-            // --- Fase D: Insertar Bancos ---
-            $this->_insertarBancosYcuentas($data->bancos);
-
             // --- Fase E: Insertar Centro de Costo (Sucursal) ---
             $this->_insertarCentroCosto($data->sucursal);
 
@@ -91,7 +88,7 @@ class DevolucionModel extends Mysql {
         $sqlOrigen = "SELECT MCL_UPP_PDT_CODIGO, MCL_CANTIDAD, MCL_BASE 
                       FROM adn_movcli 
                       WHERE MCL_DCL_NUMERO = '$numeroFacturaOrigen' 
-                      AND MCL_DCL_TDT_CODIGO = 'NEN' 
+                      AND MCL_DCL_TDT_CODIGO = 'FAV' 
                       AND MCL_DCL_TIPTRA = 'D'";
         
         $request = $this->select_all($sqlOrigen);
@@ -132,12 +129,10 @@ class DevolucionModel extends Mysql {
         $preparedData = $this->prepararDatosTransaccionalesDevolucion($devolucion, $moneda_base, $numeroFacturaOrigen, $facturaOrigen);
         $documentos = $preparedData['documentos'];
         $movimientos = $preparedData['movimientos'];
-        $recibo = $preparedData['recibo'];
-        $movimientosRecibos = $preparedData['movimientosRecibos'];
-        $documentoRecibo = $preparedData['documentoRecibo'];
 
         // Validar que no exista la devolución
         foreach ($documentos as $docArray) {
+
             $numero = $docArray[0];
             $tipoCodigo = $docArray[1];
             $tipoTransaccion = $docArray[10];
@@ -155,22 +150,6 @@ class DevolucionModel extends Mysql {
             }
         }
 
-        // Validar recibo duplicado
-        if (!empty($recibo)) {
-            $numeroRecibo = $recibo[0][0] ?? null;
-            if ($this->_reciboExiste($numeroRecibo)) {
-                throw new Exception("El recibo N° {$numeroRecibo} ya existe en la base de datos.");
-            }
-        }
-
-        if (!empty($movimientosRecibos)) {
-            $duplicadoRecibo = $this->_movimientosReciboExisten($movimientosRecibos);
-
-            if ($duplicadoRecibo) {
-                throw new Exception("El movimiento del recibo: '{$duplicadoRecibo['MBC_NUMERO']}' del recibo '{$duplicadoRecibo['MBC_REC_NUMERO']}' ya existe.");
-            }
-        }
-
         // Procesar en transacción
        // $this->beginTransaction();
         try {
@@ -182,19 +161,6 @@ class DevolucionModel extends Mysql {
                 $this->_bulkInsertMovimientos($movimientos);
             }
 
-            // Insertar recibo y movimientos de recibo
-            if (!empty($recibo)) {
-                $this->_insertRecibo($recibo);
-                
-                if (!empty($documentoRecibo)) {
-                    $this->_bulkInsertDocumentoRecibo($documentoRecibo);
-                }
-                
-                if (!empty($movimientosRecibos)) {
-                    $this->_bulkInsertMovimientosRecibo($movimientosRecibos);
-                }
-            }
-
             //$this->commit();
         } catch (Exception $e) {
             //$this->rollBack();
@@ -202,7 +168,7 @@ class DevolucionModel extends Mysql {
         }
     }
 
-        // =============================================================
+    // =============================================================
     // MÉTODOS AUXILIARES REUTILIZADOS DE DOCUMENTOMODEL
     // =============================================================
     private function _documentoExiste($numero, $tipo, $transaccion) {
@@ -249,43 +215,6 @@ class DevolucionModel extends Mysql {
 
         return false;
     }
-
-    private function _reciboExiste($numeroRecibo) {
-        $sql = "SELECT COUNT(*) as count FROM adn_recibos WHERE REC_NUMERO = '$numeroRecibo'";
-        $request = $this->select($sql);
-        return $request['count'] > 0;
-    }
-
-    private function _movimientosReciboExisten(array $movimientos) {  
-        if (empty($movimientos)) {
-            return false;
-        }
-
-        // Construimos una serie de cláusulas (OR) para buscar todas las combinaciones en una sola consulta.
-        $whereClauses = [];
-        foreach ($movimientos as $mov) {
-            // Extraemos los datos del array preparado en sus posiciones correctas
-            $mbc_numero = $this->conexion->quote($mov[0]);  // MBC_NUMERO
-            $rec_numero = $this->conexion->quote($mov[9]);  // MBC_REC_NUMERO
-
-            $whereClauses[] = "(
-                MBC_NUMERO = {$mbc_numero} AND
-                MBC_REC_NUMERO = {$rec_numero}
-            )"; 
-        }
-
-        $sql = "SELECT MBC_NUMERO, MBC_REC_NUMERO FROM adn_movbco WHERE " . implode(" OR ", $whereClauses) . " LIMIT 1";
-        
-        $this->strquery = $sql; // Guardar para depuración
-        $result = $this->select($sql);
-
-        if (!empty($result)) {
-            // Devolvemos información útil para el mensaje de error
-            return ['mbc_numero' => $result['MBC_NUMERO'], 'rec_numero' => $result['MBC_REC_NUMERO']];
-        }
-
-        return false;
-    }
     
     // =============================================================
     // PREPARAR DATOS TRANSACCIONALES PARA DEVOLUCIÓN
@@ -297,21 +226,22 @@ class DevolucionModel extends Mysql {
 
         $documentos = [];
         $movimientos = [];
-        $movimientos_recibo = [];
-        $documentoRecibo = [];
-        $recibo = NULL;
-        
+
+        $idsDocumentos = $this->idsDocumentos();
+
+        $numeroDevUltimo     = $idsDocumentos['nDev'];
+
         // Determinar el tipo de documento principal basado en tipo_documento de la factura
-        $tipoDocPrincipal = ($devolucion->tipo_documento === 'DEVN') ? 'DEVN' : 'DEV';
-        $documentos[] = $this->_prepararArrayDocumentoDevolucion($devolucion, $tipoDocPrincipal, 'D', $moneda_base, $numeroFacturaOrigen, $tipoDocumentoOrigen);
+        $tipoDocPrincipal = $devolucion->tipo_documento;
+        $documentos[] = $this->_prepararArrayDocumentoDevolucion($devolucion, $tipoDocPrincipal, 'D', $moneda_base, $numeroFacturaOrigen, $tipoDocumentoOrigen, ['numeroDevUltimo' => $numeroDevUltimo]);
 
 		
-		if($devolucion->empresa !== 'CRM'){
+		if($devolucion->empresa !== 'CRM' && $devolucion->empresa !== 'ENV_TEST'){
 		
         	// Documento FAV$/NEN$ (D) si moneda base es BS
 			if ($moneda_base == 'BS') {
 				// Determinar el tipo de documento en dólares
-				$tipoDocDolar = ($devolucion->tipo_documento === 'DEVN') ? 'DEVN$' : 'DEV$';
+				$tipoDocDolar = 'DEV$';
 				
 				$documentos[] = $this->_prepararArrayDocumentoDevolucion($devolucion, $tipoDocDolar, 'D', 'USD', $numeroFacturaOrigen, $tipoDocumentoOrigen, [
 					'brutoUsd' => $devolucion->monto_bruto / $devolucion->valor_cambiario_dolar,
@@ -319,7 +249,8 @@ class DevolucionModel extends Mysql {
 					'baseGravadoUsd' => $devolucion->base_gravada / $devolucion->valor_cambiario_dolar,
 					'exentoUsd' => $devolucion->exento / $devolucion->valor_cambiario_dolar,
 					'ivaGravadoUsd' => $devolucion->iva_gravado / $devolucion->valor_cambiario_dolar,
-					'baseIgtfUsd' => $devolucion->base_igtf / $devolucion->valor_cambiario_dolar
+					'baseIgtfUsd' => $devolucion->base_igtf / $devolucion->valor_cambiario_dolar,
+                    'numeroDevUltimo' => $numeroDevUltimo
 				]);
 			}
 		}
@@ -328,39 +259,28 @@ class DevolucionModel extends Mysql {
         // Movimientos contables (detalle)
         if (!empty($devolucion->movimientos)) {
             foreach ($devolucion->movimientos as $mov) {
-                $movimientos[] = $this->_prepararArrayMovimientoDevolucion($devolucion->numero, $devolucion->tipo_documento, $mov, $tipoDocumentoOrigen, $numeroFacturaOrigen);
+                $movimientos[] = $this->_prepararArrayMovimientoDevolucion($numeroDevUltimo, $devolucion->tipo_documento, $mov, $tipoDocumentoOrigen, $numeroFacturaOrigen);
             }
-        }
-
-         // Recibo y movimientos del recibo
-        if (!empty($devolucion->recibo)) {
-            $recibo = $this->_prepararArrayReciboDevolucion($devolucion);
-
-            foreach ($devolucion->recibo->movimientos as $mov) {
-                $movimientos_recibo[] = $this->_prepararArrayMovimientoReciboDevolucion($devolucion, $mov);
-            }
-
-            // Documento de pago (FAV/NEN o FAV$/NEN$ tipo P)
-            $tipoDocPago = '';
-            if ($moneda_base == 'BS') {
-                $tipoDocPago = ($devolucion->tipo_documento === 'DEVN') ? 'DEVN$' : 'DEV$';
-            } else {
-                $tipoDocPago = ($devolucion->tipo_documento === 'DEVN') ? 'DEVN' : 'DEV';
-            }
-            $netoPago = ($tipoDocPago == 'DEV$' || $tipoDocPago == 'DEVN$') ? $devolucion->neto / $devolucion->valor_cambiario_dolar : $devolucion->neto;
-            
-            $documentoRecibo[] = $this->_prepararArrayDocumentoDevolucion($devolucion, $tipoDocPago, 'P', $moneda_base, $numeroFacturaOrigen, $tipoDocumentoOrigen,[
-                'referencia' => $devolucion->recibo->codigo,
-                'netoUsd' => $netoPago
-            ]);
         }
 		
         return ['documentos' => $documentos, 
-                'movimientos' => $movimientos, 
-                'recibo' => $recibo, 
-                'movimientosRecibos' => $movimientos_recibo,
-                'documentoRecibo' => $documentoRecibo
+                'movimientos' => $movimientos
                ];
+    }
+
+    protected function idsDocumentos(){
+        
+        $sql = "SELECT 
+                IFNULL((SELECT LPAD(MAX(CAST(D1.DCL_NUMERO AS UNSIGNED)) + 1, 10, 0)
+                FROM ADN_DOCCLI D1
+                WHERE D1.DCL_TDT_CODIGO = 'FAV'), '0000000001') AS nDoc,
+
+                IFNULL((SELECT LPAD(MAX(CAST(D1.DCL_NUMERO AS UNSIGNED)) + 1, 10, 0)
+                FROM ADN_DOCCLI D1
+                WHERE D1.DCL_TDT_CODIGO = 'DEV'), '0000000001') AS nDev";
+
+        $result = $this->select($sql);
+        return $result;
     }
 
     // =============================================================
@@ -369,24 +289,23 @@ class DevolucionModel extends Mysql {
     private function _prepararArrayDocumentoDevolucion($devolucion, $tipo_documento_procesar, $tipo_doc, $base_moneda, $numeroFacturaOrigen, $tipoDocumentoOrigen, $overrides = []) {
         
         $fechaVencimiento = date("Y-m-d", strtotime("{$devolucion->fecha} + {$devolucion->plazo} days"));
-        $cxc = '-1';
+        $cxc = '0';
         $tdtOrigen = ($tipo_doc === 'D') ? $tipoDocumentoOrigen : '';
 
-        if ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEV$' || $tipo_documento_procesar === 'DEVN' || $tipo_documento_procesar === 'DEVN$') {
+        if ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEV$') {
 
             $origen = ($tipo_doc === 'D') ? "{$tipoDocumentoOrigen}:{$numeroFacturaOrigen}" : (($tipo_doc === 'P') ? '' : null);
-            $SistemOrigen = ($tipo_doc === 'D') ? 'MOD' : (($tipo_doc === 'P') ? 'REC' : null);
-            $cxc = ($tipo_doc === 'D') ? (($base_moneda === 'USD') ? "-1" : "0") : (($tipo_doc === 'P') ? "1" : null);
+            $SistemOrigen = ($tipo_doc === 'D') ? 'MOD' : null;
         }
 
-        $moneda = ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEVN') ? $devolucion->moneda : 'USD';
-        $neto_usd = ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEVN') ? $devolucion->neto_usd : $devolucion->neto;
-        $base_gravada_usd = ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEVN') ? $devolucion->base_gravada_usd : $devolucion->base_gravada;
-        $exento_usd = ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEVN') ? $devolucion->exento_usd : $devolucion->exento;
-        $iva_gravado_usd = ($tipo_documento_procesar === 'DEV' || $tipo_documento_procesar === 'DEVN') ? $devolucion->iva_gravado_usd : $devolucion->iva_gravado;
+        $moneda = ($tipo_documento_procesar === 'DEV') ? $devolucion->moneda : 'USD';
+        $neto_usd = ($tipo_documento_procesar === 'DEV') ? $devolucion->neto_usd : $devolucion->neto;
+        $base_gravada_usd = ($tipo_documento_procesar === 'DEV') ? $devolucion->base_gravada_usd : $devolucion->base_gravada;
+        $exento_usd = ($tipo_documento_procesar === 'DEV') ? $devolucion->exento_usd : $devolucion->exento;
+        $iva_gravado_usd = ($tipo_documento_procesar === 'DEV') ? $devolucion->iva_gravado_usd : $devolucion->iva_gravado;
 
         return [
-            $devolucion->numero, $tipo_documento_procesar, $overrides['referencia'] ?? '', $devolucion->vendedor->codigo, $devolucion->cliente->codigo, $devolucion->fecha, 
+            $overrides['numeroDevUltimo'] ?? $devolucion->numero, $tipo_documento_procesar, $overrides['referencia'] ?? '', $devolucion->vendedor->codigo, $devolucion->cliente->codigo, $devolucion->fecha, 
             $this->sanitizeNumber($overrides['netoUsd'] ?? $devolucion->neto), $this->sanitizeNumber(($overrides['baseGravadoUsd'] ?? $devolucion->base_gravada)), 
             $this->sanitizeNumber(($overrides['exentoUsd'] ?? $devolucion->exento)), $devolucion->serie_fiscal, $tipo_doc, $cxc, $devolucion->activo, $devolucion->estado_documento, 
             $this->sanitizeNumber($devolucion->descuento_porcentual ?? 0), "{$devolucion->fecha} {$devolucion->hora}", $devolucion->numero_impresion_fiscal, 
@@ -403,7 +322,7 @@ class DevolucionModel extends Mysql {
     // =============================================================
     private function _prepararArrayMovimientoDevolucion($numero_doc, $tipo_doc, $mov, $tipoDocumentoOrigen, $numeroFacturaOrigen) {
 
-        $valorInv = ($tipo_doc == 'DEV' || $tipo_doc == 'DEVN') ? "1" : "-1";
+        $valorInv = ($tipo_doc == 'DEV') ? "1" : "-1";
         $iva = ($mov->tipo_iva == 'GN') ? "16.00" : "0.00";
         $id_iva = ($mov->tipo_iva == 'GN') ? "13" : "1";
 
@@ -412,41 +331,6 @@ class DevolucionModel extends Mysql {
             $mov->unidad->codigo, '', $mov->transaccion, $mov->cantidad, $valorInv, $valorInv, $valorInv, 
             $this->sanitizeNumber($mov->descuento_porcentual ?? 0), $this->sanitizeNumber($mov->precio), 'D', $mov->tipo_lista_precio, $mov->cantidad, $iva, 
             $mov->tipo_iva, '1', $mov->descripcion, $tipoDocumentoOrigen, "{$tipoDocumentoOrigen}:{$numeroFacturaOrigen}", '', $this->sanitizeNumber($mov->costo)
-        ];
-    }
-
-    // =============================================================
-    // PREPARAR ARRAY DE RECIBO PARA DEVOLUCIÓN
-    // =============================================================
-    private function _prepararArrayReciboDevolucion($devolucion) {
-
-        return [[
-            $devolucion->recibo->codigo,
-            $this->sanitizeNumber($devolucion->recibo->monto),
-            $devolucion->cliente->codigo,
-            $devolucion->recibo->fecha,
-            "{$devolucion->fecha} {$devolucion->hora}",
-            'P',
-            $devolucion->vendedor->codigo,
-            $devolucion->ip,
-            $devolucion->usuario,
-            $devolucion->estacion,
-            $this->sanitizeNumber($devolucion->valor_cambiario_dolar),
-            $this->sanitizeNumber($devolucion->valor_cambiario_peso)
-        ]];
-    }
-
-    // =============================================================
-    // PREPARAR ARRAY DE MOVIMIENTO DE RECIBO PARA DEVOLUCIÓN
-    // =============================================================
-    private function _prepararArrayMovimientoReciboDevolucion($devolucion, $movimiento) {
-
-        return [
-            $movimiento->referencia,$movimiento->fecha,$movimiento->hora,$this->sanitizeNumber($movimiento->monto),$movimiento->tipo_operacion,
-            $movimiento->banco->codigo,$movimiento->banco->cuenta->numero,$movimiento->activo,$movimiento->tipo_movimiento,
-            $devolucion->recibo->codigo, $movimiento->codigo_caja,'REC',$devolucion->usuario,$devolucion->estacion,$devolucion->ip,
-            $this->sanitizeNumber($movimiento->monto_usd),$movimiento->moneda,$this->sanitizeNumber($devolucion->valor_cambiario_dolar),
-            $this->sanitizeNumber($devolucion->valor_cambiario_peso),''
         ];
     }
 
@@ -485,89 +369,9 @@ class DevolucionModel extends Mysql {
         $this->insert_massive("INSERT INTO adn_movcli ($columnas) VALUES " . implode(', ', $valueStrings));
     }
 
-    private function _insertRecibo($data) {
-        if (empty($data)) return;
-        
-        $columnas = "REC_NUMERO, REC_MONTO, REC_CLT_CODIGO, REC_FECHA, REC_FECHAHORA, REC_TIPO, REC_VEN_CODIGO,
-                        REC_IP, REC_USUARIO, REC_ESTACION, REC_VALORCAM, REC_VALORCAM2";
-        
-        $valueStrings = [];
-        foreach ($data as $fila) {
-            $sanitizedValues = array_map([$this->conexion, 'quote'], $fila);
-            $valueStrings[] = "(" . implode(',', $sanitizedValues) . ")";
-           
-        }
-
-        $this->insert_massive("INSERT INTO adn_recibos ($columnas) VALUES " . implode(', ', $valueStrings));
-
-    }
-
-    private function _bulkInsertDocumentoRecibo($data) {
-        if (empty($data)) return;
-
-        $columnas = "DCL_NUMERO, DCL_TDT_CODIGO, DCL_REC_NUMERO, DCL_VEN_CODIGO, DCL_CLT_CODIGO, DCL_FECHA, DCL_NETO, 
-                    DCL_BASEG, DCL_EXENTO, DCL_SERFIS, DCL_TIPTRA, DCL_CXC, DCL_ACTIVO, DCL_STD_ESTADO, DCL_PORDESC, 
-                    DCL_FECHAHORA, DCL_NUMFIS, DCL_IVAG, DCL_HORA, DCL_PLAZO, DCL_CONDICION, DCL_FECHAVEN, DCL_TDT_ORIGEN, DCL_ORIGENNUM, 
-                    DCL_IDCAJA, DCL_BRUTO, DCL_USUARIO, DCL_ESTACION, DCL_IP, DCL_ORIGEN, DCL_CCT_CODIGO, DCL_VALORCAM, DCL_MONEDA,
-                    DCL_VALORCAM2, DCL_NETOUSD, DCL_BASEGUSD, DCL_EXENTOUSD, DCL_IVAGUSD, DCL_IGTF";
-        
-        $valueStrings = [];
-        foreach ($data as $fila) {
-            $sanitizedValues = array_map([$this->conexion, 'quote'], $fila);
-            $valueStrings[] = "(" . implode(',', $sanitizedValues) . ")";
-        }
-
-        $this->insert_massive("INSERT INTO adn_doccli ($columnas) VALUES " . implode(', ', $valueStrings));
-    }
-
-    private function _bulkInsertMovimientosRecibo($data) {
-        if (empty($data)) return;
-
-        // Paso 1: Insertamos cada movimiento bancario y guardamos el ID
-        foreach ($data as $fila) {
-            $sql = "INSERT INTO adn_movbco (
-                        MBC_NUMERO, MBC_FECHA, MBC_HORA, MBC_MONTO, MBC_OBC_TIPO, MBC_CBC_BCO_CODIGO, MBC_CBC_CUENTA,
-                        MBC_ACTIVO, MBC_TTB_CODIGO, MBC_REC_NUMERO, MBC_IDCAJA, MBC_ORIGEN, MBC_USUARIO, MBC_ESTACION, MBC_IP,
-                        MBC_MONTOOTRAMONEDA, MBC_OTRAMONEDA, MBC_VALORCAM, MBC_VALORCAM2, MBC_SERIAL
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-            $this->insertMovRecibo($sql, $fila);
-        }
-    }
-
     // =============================================================
     // MÉTODOS DE INSERCIÓN MASIVA DE MAESTROS (copiados de DocumentoModel)
     // =============================================================
-    
-    private function _insertarBancosYcuentas(array $bancos) {
-        foreach ($bancos as $codigoBanco => $banco) {
-            $checkBanco = $this->select("SELECT COUNT(*) as total FROM adn_bancos WHERE BCO_CODIGO = '$banco->codigo'");
-            if ($checkBanco['total'] == 0) {
-                $sqlBanco = "INSERT INTO adn_bancos (BCO_CODIGO, BCO_NOMBRE, BCO_ACTIVO) VALUES (?, ?, ?)";
-                $this->insert($sqlBanco, [
-                    $banco->codigo,
-                    $banco->nombre,
-                    $banco->activo
-                ]);
-            }
-
-            if (isset($banco->cuenta)) {
-                $cuenta = $banco->cuenta;
-                $checkCuenta = $this->select("SELECT COUNT(*) AS total FROM adn_ctabanco WHERE CBC_BCO_CODIGO = '$banco->codigo' AND CBC_CUENTA = '$cuenta->numero'");
-                if ($checkCuenta['total'] == 0) {
-                    $sqlCuenta = "INSERT INTO adn_ctabanco (CBC_BCO_CODIGO, CBC_CUENTA, CBC_TITULAR, CBC_ACTIVO, CBC_SUCURSAL) VALUES (?, ?, ?, ?, ?)";
-                    $this->insert($sqlCuenta, [
-                        $banco->codigo,
-                        $cuenta->numero,
-                        $cuenta->titular,
-                        $cuenta->activo,
-                        '000001'
-                    ]);
-                }
-            }
-        }
-    }
-
     private function _insertarCentroCosto($data) {
         if (empty($data)) return;
 

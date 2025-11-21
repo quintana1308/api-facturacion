@@ -324,7 +324,7 @@ class LoteModel extends Mysql {
             $documentos[] = $this->_prepararArrayDocumento($factura, 'FAV', 'D', $moneda_base, ['numeroDocUltimo' => $numeroDocUltimo, 'horaFav' => $horaFav['tiempo']], $empresa);
         }	
 
-		if($empresa !== 'CRM'){
+		if($empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
         	// Documento FAV$/NEN$ (D) si moneda base es BS
 			if ($moneda_base == 'BS') {
 				// Determinar el tipo de documento en dólares
@@ -437,11 +437,17 @@ class LoteModel extends Mysql {
             
             if($factura->tipo_documento === 'NEN'){
 
-                if ($moneda_base == 'BS') {
-                    $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
-                    $tipoDocPagoNen = 'NEN$';
-                    $tipoDocPagoFav = 'FAV$';
-                } else {
+                if($factura->empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
+                    if ($moneda_base == 'BS') {
+                        $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
+                        $tipoDocPagoNen = 'NEN$';
+                        $tipoDocPagoFav = 'FAV$';
+                    } else {
+                        $netoPago = $factura->neto;
+                        $tipoDocPagoNen = 'NEN';
+                        $tipoDocPagoFav = 'FAV';
+                    }
+                }else{
                     $netoPago = $factura->neto;
                     $tipoDocPagoNen = 'NEN';
                     $tipoDocPagoFav = 'FAV';
@@ -461,10 +467,15 @@ class LoteModel extends Mysql {
 
             }else{
 
-                if ($moneda_base == 'BS') {
-                    $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
-                    $tipoDocPagoFav = 'FAV$';
-                } else {
+                if($factura->empresa !== 'CRM' && $factura->empresa !== 'ENV_TEST'){
+                    if ($moneda_base == 'BS') {
+                        $netoPago = $factura->neto / $factura->valor_cambiario_dolar;
+                        $tipoDocPagoFav = 'FAV$';
+                    } else {
+                        $netoPago = $factura->neto;
+                        $tipoDocPagoFav = 'FAV';
+                    }
+                }else{
                     $netoPago = $factura->neto;
                     $tipoDocPagoFav = 'FAV';
                 }
