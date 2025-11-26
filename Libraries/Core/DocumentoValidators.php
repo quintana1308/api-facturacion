@@ -27,13 +27,13 @@ class DocumentoValidators {
         if (empty($factura->moneda)) $missing[] = 'moneda';
 		if (empty($factura->monto_bruto)) $missing[] = 'monto_bruto';
         if (empty($factura->neto)) $missing[] = 'neto';
-		if (empty($factura->neto_usd)) $missing[] = 'neto_usd';
+		if (!property_exists($factura, 'neto_usd') || is_null($factura->neto_usd)) $missing[] = 'neto_usd';
 		if (empty($factura->base_gravada)) $missing[] = 'base_gravada';
-		if (empty($factura->base_gravada_usd)) $missing[] = 'base_gravada_usd';
+		if (!property_exists($factura, 'base_gravada_usd') || is_null($factura->base_gravada_usd)) $missing[] = 'base_gravada_usd';
 		if (empty($factura->exento)) $missing[] = 'exento';
-		if (empty($factura->exento_usd)) $missing[] = 'exento_usd';
+		if (!property_exists($factura, 'exento_usd') || is_null($factura->exento_usd)) $missing[] = 'exento_usd';
 		if (empty($factura->iva_gravado)) $missing[] = 'iva_gravado';
-		if (empty($factura->iva_gravado_usd)) $missing[] = 'iva_gravado_usd';
+		if (!property_exists($factura, 'iva_gravado_usd') || is_null($factura->iva_gravado_usd)) $missing[] = 'iva_gravado_usd';
         if (empty($factura->descuento_porcentual)) $missing[] = 'descuento_porcentual';
 		if (empty($factura->valor_cambiario_dolar)) $missing[] = 'valor_cambiario_dolar';
 		if (empty($factura->valor_cambiario_peso)) $missing[] = 'valor_cambiario_peso';
