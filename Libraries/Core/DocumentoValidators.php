@@ -11,7 +11,7 @@ class DocumentoValidators {
 		if (empty($factura->numero)) $missing[] = 'numero';
 		if (empty($factura->tipo_documento)) $missing[] = 'tipo_documento';
 		if (empty($factura->ip)) $missing[] = 'ip';
-		if (empty($factura->serie_fiscal)) $missing[] = 'serie_fiscal';
+		if (!property_exists($factura, 'serie_fiscal')) $missing[] = 'serie_fiscal';
 		if (empty($factura->estado_documento)) $missing[] = 'estado_documento';
         if (empty($factura->sucursal)) $missing[] = 'sucursal';
 		if (empty($factura->fecha)) $missing[] = 'fecha';
