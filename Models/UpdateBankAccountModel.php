@@ -95,6 +95,32 @@ class UpdateBankAccountModel extends Mysql {
 
             $arrayValues = array($refTransaccion, $dateTransaccion, $hourTransaccion, $typeTransaccion, $codBanco, $codCuenta, $refTransaccionAntigua, $codRecibo);
             $this->update($sql, $arrayValues);
+
+            /******* ACTUALIZAR MOVIMIENTOS BANCARIOS DE LA FACTURA *******/
+
+            /*** BUSCO EL NUMERO DE LA ORDEN ***/
+            $sqlNumNen = "SELECT DCL_NUMERO FROM adn_doccli WHERE DCL_REC_NUMERO = '$codRecibo'";
+            $requestNumNen = $this->select($sqlNumNen);
+            $numNen = $requestNumNen['DCL_NUMERO'];
+
+            /**** BUSCAR NUMERO DE FACTURA  ****/
+            $sqlNumFac = "SELECT DCL_NUMERO FROM adn_doccli WHERE DCL_TDT_CODIGO = 'FAV' AND DCL_ORIGENNUM LIKE '%$numNen%'";
+            $requestNumFac = $this->select($sqlNumFac);
+            $numFac = $requestNumFac['DCL_NUMERO'];
+
+            /*** BUSCAR REFERENCIA BANCARIA DE LA FACTURA (FAV) ***/
+            $sqlRefFac = "SELECT DCL_REC_NUMERO FROM adn_doccli WHERE DCL_NUMERO = '$numFac' AND DCL_REC_NUMERO != ''";
+            $requestRefFac = $this->select($sqlRefFac);
+            $refFac = $requestRefFac['DCL_REC_NUMERO']; 
+
+            /**** ACTUALIZAR MOVIMIENTOS BANCARIO DE LA FACTURA (FAV) ****/
+            $sqlUpdateFac = "UPDATE adn_movbco 
+					SET MBC_NUMERO = ?, MBC_FECHA = ?, MBC_HORA = ?, MBC_OBC_TIPO = ?, MBC_CBC_BCO_CODIGO = ?, MBC_CBC_CUENTA = ?
+					WHERE MBC_NUMERO = ?
+                    AND MBC_REC_NUMERO = ?";
+
+            $arrayValuesUpdateFac = array($refTransaccion, $dateTransaccion, $hourTransaccion, $typeTransaccion, $codBanco, $codCuenta, $refTransaccionAntigua, $refFac);
+            $this->update($sqlUpdateFac, $arrayValuesUpdateFac);
         }
     }
 }
