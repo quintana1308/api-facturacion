@@ -59,7 +59,7 @@ class DocumentoModel extends Mysql {
     // MÉTODO PARA PROCESAR UNA ÚNICA FACTURA CON SUS DOCUMENTOS
     // =============================================================
     public function procesarFactura($factura, $moneda_base) {
-	
+
         // 1. Preparamos los datos de los documentos para esta factura
         $preparedData = $this->prepararDatosTransaccionalesFactura($factura, $moneda_base);
         $documentos = $preparedData['documentos'];
@@ -391,10 +391,10 @@ class DocumentoModel extends Mysql {
 
             foreach ($factura->recibo->movimientos as $mov) {
                 if($factura->tipo_documento === 'NEN'){
-                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'NEN');
-                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'FAV', ['numeroReciboUltimo' => $numeroReciboUltimo]);
+                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'NEN', ['valor_cambiario_dolar' => $factura->valor_cambiario_dolar, 'valor_cambiario_peso' => $factura->valor_cambiario_peso]);
+                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'FAV', ['numeroReciboUltimo' => $numeroReciboUltimo, 'valor_cambiario_dolar' => $factura->valor_cambiario_dolar, 'valor_cambiario_peso' => $factura->valor_cambiario_peso]);
                 }else{
-                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'FAV', ['numeroReciboUltimo' => $numeroReciboUltimo]);
+                    $movimientos_recibo[] = $this->_prepararArrayMovimientoRecibo($factura, $mov, 'FAV', ['numeroReciboUltimo' => $numeroReciboUltimo, 'valor_cambiario_dolar' => $factura->valor_cambiario_dolar, 'valor_cambiario_peso' => $factura->valor_cambiario_peso]);
                 }
 
                 if (strtoupper($mov->moneda) !== 'BS') {
@@ -641,13 +641,24 @@ class DocumentoModel extends Mysql {
     {   
         $activo = ($tipo_documento == 'NEN') ? '0' : '1';
 
-        return [
-            $movimiento->referencia,$movimiento->fecha,$movimiento->hora,$this->sanitizeNumber($movimiento->monto),$movimiento->tipo_operacion,
-            $movimiento->banco->codigo,$movimiento->banco->cuenta->numero,$activo,$movimiento->tipo_movimiento,
-            $overrides['numeroReciboUltimo'] ?? $factura->recibo->codigo, $movimiento->codigo_caja,'REC',$factura->usuario,$factura->estacion,$factura->ip,
-            $this->sanitizeNumber($movimiento->monto_usd),$movimiento->moneda,$this->sanitizeNumber($factura->valor_cambiario_dolar),
-            $this->sanitizeNumber($factura->valor_cambiario_peso),''
-            ];
+        if($movimiento->tipo_operacion == 'TAR' || $movimiento->tipo_operacion == 'TDB'){
+            return [
+                $overrides['numeroReciboUltimo'] ?? $factura->recibo->codigo, $movimiento->tipo_operacion, $this->sanitizeNumber($movimiento->monto),
+                $movimiento->fecha, "{$movimiento->fecha} {$movimiento->hora}", '000001', $movimiento->referencia, '027', $movimiento->banco->codigo,
+                $activo, $movimiento->tipo_movimiento, '1', $movimiento->codigo_caja, $tipo_documento, 'Indefinida', 'MOV', '49', 'NUBE2ADN',
+                $overrides['valor_cambiario_dolar'], $overrides['valor_cambiario_peso']
+                ];
+        }else{
+            return [
+                $movimiento->referencia,$movimiento->fecha,$movimiento->hora,$this->sanitizeNumber($movimiento->monto),$movimiento->tipo_operacion,
+                $movimiento->banco->codigo,$movimiento->banco->cuenta->numero,$activo,$movimiento->tipo_movimiento,
+                $overrides['numeroReciboUltimo'] ?? $factura->recibo->codigo, $movimiento->codigo_caja,'REC',$factura->usuario,$factura->estacion,$factura->ip,
+                $this->sanitizeNumber($movimiento->monto_usd),$movimiento->moneda,$this->sanitizeNumber($factura->valor_cambiario_dolar),
+                $this->sanitizeNumber($factura->valor_cambiario_peso),''
+                ];
+        }
+
+        
     }
 
     private function sanitizeNumber($value)
@@ -1120,16 +1131,33 @@ class DocumentoModel extends Mysql {
 
         $idsMovimientos = [];
 
+        $tiposEspeciales = ['TAR', 'TDB'];
+
         // Paso 1: Insertamos cada movimiento bancario y guardamos el ID
         foreach ($data as $fila) {
-            $sql = "INSERT INTO adn_movbco (
+
+            $tipo = $fila[1];
+
+            if (in_array($tipo, $tiposEspeciales)) {
+                $sql = "INSERT INTO adn_movcaja (MCJ_REC_NUMERO, MCJ_INS_CODIGO, MCJ_MONTO, MCJ_FECHA, 
+                        MCJ_FECHAHORA, MCJ_CAJ_CODIGO, MCJ_NUMCONFIR, MCJ_BCO_CODIGO, MCJ_MFI_CODIGO, MCJ_ACTIVO, 
+                        MCJ_TTC_CODIGO, MCJ_NUMEROREF, MCJ_IDCAJA, MCJ_DOCORIGEN, MCJ_CTA_CODIGO, MCJ_ORIGEN, MCJ_USUARIO, 
+                        MCJ_ESTACION, MCJ_VALORCAM, MCJ_VALORCAM2) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+                $idInsertado = $this->insertMovRecibo($sql, $fila); // <-- Este método debe devolver el lastInsertId()
+                $idsMovimientos[] = $idInsertado;
+            } else {
+                $sql = "INSERT INTO adn_movbco (
                         MBC_NUMERO, MBC_FECHA, MBC_HORA, MBC_MONTO, MBC_OBC_TIPO, MBC_CBC_BCO_CODIGO, MBC_CBC_CUENTA,
                         MBC_ACTIVO, MBC_TTB_CODIGO, MBC_REC_NUMERO, MBC_IDCAJA, MBC_ORIGEN, MBC_USUARIO, MBC_ESTACION, MBC_IP,
                         MBC_MONTOOTRAMONEDA, MBC_OTRAMONEDA, MBC_VALORCAM, MBC_VALORCAM2, MBC_SERIAL
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-            $idInsertado = $this->insertMovRecibo($sql, $fila); // <-- Este método debe devolver el lastInsertId()
-            $idsMovimientos[] = $idInsertado;
+                $idInsertado = $this->insertMovRecibo($sql, $fila); // <-- Este método debe devolver el lastInsertId()
+                $idsMovimientos[] = $idInsertado;
+            }
+            
         }
 
         // Paso 2: Asociamos documentos IGTF con cada movimiento insertado

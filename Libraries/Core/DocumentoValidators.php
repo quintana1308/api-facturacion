@@ -231,7 +231,9 @@ class DocumentoValidators {
             if (!isset($data->banco->activo)) $missing[] = 'recibo.movimiento.banco.activo';
 
             if (empty($data->banco->cuenta)) {
-                $missing[] = 'recibo.movimiento.banco.cuenta';
+                if ($data->tipo_operacion != 'TAR' && $data->tipo_operacion != 'TDB') {
+                    $missing[] = 'recibo.movimiento.banco.cuenta';
+                }
             } else {
                 $cuenta = $data->banco->cuenta;
                 if (empty($cuenta->numero)) $missing[] = 'recibo.movimiento.banco.cuenta.numero';

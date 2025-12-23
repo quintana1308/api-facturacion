@@ -86,7 +86,7 @@ class Documento extends Controllers {
     private function initializeRequest() {
         
         $postdata = file_get_contents("php://input");
-		
+
         if (!$postdata) {
             $this->sendError(400, "No se recibió un cuerpo de petición válido.");
         }
